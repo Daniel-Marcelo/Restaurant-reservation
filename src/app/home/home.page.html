@@ -1,0 +1,21 @@
+<ion-content class="ion-padding">
+  <div class="text-center">
+    <h6>Name of App</h6>
+  </div>
+  <div class="text-center">
+    <img id="logo" width="200" src="../../assets/icon/logo.png">
+  </div>
+  <form #heroForm="ngForm">
+    <ion-item>
+      <ion-label position="fixed">Email</ion-label>
+      <ion-input type="email" name="email" [(ngModel)]="email" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="fixed">Password</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="password" required></ion-input>
+    </ion-item>
+    <ion-button class="submit" type="submit" expand="block" [disabled]="!heroForm.form.valid">Login</ion-button>
+    <p class="align-left">Forgot Password?</p>
+    <p class="align-right" [routerLink]="['/sign-up']">New User? SIGN UP</p>
+  </form>
+</ion-content>
