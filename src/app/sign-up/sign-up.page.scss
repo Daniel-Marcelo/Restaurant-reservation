@@ -1,3 +1,4 @@
-ion-item, ion-button {
+ion-button,
+.form > ion-item:not(:first-child) {
     margin-top: 20px;
 }
